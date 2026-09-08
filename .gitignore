@@ -1,0 +1,7 @@
+# vendored third-party skills — not our code
+.claude/skills/
+
+# local
+node_modules/
+.DS_Store
+Thumbs.db
