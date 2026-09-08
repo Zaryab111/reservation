@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — ANDRES Rooftop Smokehouse and Grill</title>
+<meta name="description" content="Post oak brisket, ribs, live-fire grill, sides and bar. Filter by course, search any dish, or download the printable PDF menu.">
+<link rel="icon" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Karla:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <img src="assets/images/logo.jpg" alt="">
+    <span>
+      <span class="name">ANDRES</span>
+      <span class="sub">Rooftop Smokehouse &amp; Grill</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html" aria-current="page">Menu</a>
+    <a href="reservations.html">Reservations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn small head-cta" href="reservations.html">Book a Table</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservations.html">Reservations</a>
+  <a href="contact.html">Contact</a>
+  <p class="foot">(512) 555&#8209;0184 &middot; 1200 E Sixth St, Austin</p>
+</div>
+
+<main id="main">
+
+  <div class="page-head">
+    <img class="page-bg" src="assets/images/delicacy-1.jpg" alt="" aria-hidden="true">
+    <div class="shell">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span>Menu</p>
+      <span class="eyebrow">Dinner &middot; Updated weekly</span>
+      <h1>The Menu</h1>
+      <p class="lede mt4">Everything meets fire or smoke at some point. When a cut runs out for
+         the night it comes off the board &mdash; you will see it marked here too.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="shell">
+
+      <div class="notice" style="margin-bottom:2rem">
+        <b>New</b>
+        <span>Course filtering, dish search and the downloadable PDF are the additions to this
+          page. In the finished build the web menu and the PDF are generated from one source in
+          the CMS, so the two can never disagree.</span>
+      </div>
+
+      <div class="menu-bar">
+        <div class="filters" role="group" aria-label="Filter menu by course">
+          <button class="filter on" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="smokehouse" aria-pressed="false">Smokehouse</button>
+          <button class="filter" type="button" data-filter="grill" aria-pressed="false">Grill</button>
+          <button class="filter" type="button" data-filter="starters" aria-pressed="false">To Start</button>
+          <button class="filter" type="button" data-filter="sides" aria-pressed="false">Sides</button>
+          <button class="filter" type="button" data-filter="desserts" aria-pressed="false">Sweet</button>
+          <button class="filter" type="button" data-filter="bar" aria-pressed="false">Bar</button>
+        </div>
+
+        <div class="field search">
+          <label class="sr-only" for="menu-search">Search the menu</label>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input id="menu-search" type="search" placeholder="Search dishes…" data-search autocomplete="off">
+        </div>
+
+        <button class="btn small" type="button" data-pdf>Download PDF Menu</button>
+        <p class="count" data-count></p>
+      </div>
+
+      <!-- rendered from assets/js/menu-data.js -->
+      <div data-menu></div>
+
+      <p class="empty" data-empty>Nothing matches that. Try another course, or clear the search.</p>
+
+      <div class="notice mt5">
+        <b>Allergies</b>
+        <span>Tell us when you book or tell your server. Our kitchen handles nuts, dairy, gluten
+          and shellfish, so we will always talk you through what is genuinely safe rather than
+          guess.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="strip">
+    <img class="strip-bg" src="assets/images/beverages.jpg" alt="" aria-hidden="true" loading="lazy">
+    <div class="shell narrow center" data-rev>
+      <span class="eyebrow">Hungry yet</span>
+      <h2>Weekend tables go three weeks out</h2>
+      <div class="divider"></div>
+      <div class="row center mt4">
+        <a class="btn" href="reservations.html">Check Availability</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <div class="cols">
+      <div class="col">
+        <h4>Find us</h4>
+        <p>1200 East Sixth Street<br>Rooftop, Level 7<br>Austin, Texas 78702</p>
+        <a class="link-u" href="contact.html">Directions</a>
+      </div>
+      <div class="col">
+        <h4>Hours</h4>
+        <ul class="hours">
+          <li data-day="1"><span class="day">Mon</span><span>Closed</span></li>
+          <li data-day="2"><span class="day">Tue &ndash; Thu</span><span>4 &ndash; 10 PM</span></li>
+          <li data-day="5"><span class="day">Fri &ndash; Sat</span><span>4 &ndash; 11 PM</span></li>
+          <li data-day="0"><span class="day">Sun</span><span>12 &ndash; 9 PM</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Reservations</h4>
+        <p class="muted">Book online any time, or call between 3 and 10 PM.</p>
+        <a class="btn small" href="reservations.html">Book a Table</a>
+      </div>
+      <div class="col">
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; <span data-year>2026</span> ANDRES Rooftop Smokehouse &amp; Grill</span>
+      <span>Demo build &middot; placeholder address, phone and copy</span>
+      <span>Privacy &middot; Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

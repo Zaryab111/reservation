@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservations — ANDRES Rooftop Smokehouse and Grill</title>
+<meta name="description" content="Book a table at ANDRES. Choose your date, party size and time, and see what is actually still free. No deposit, no card required.">
+<link rel="icon" href="assets/images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Karla:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="index.html">
+    <img src="assets/images/logo.jpg" alt="">
+    <span>
+      <span class="name">ANDRES</span>
+      <span class="sub">Rooftop Smokehouse &amp; Grill</span>
+    </span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="reservations.html" aria-current="page">Reservations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn small head-cta" href="tel:+15125550184">(512) 555&#8209;0184</a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="drawer" id="drawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="reservations.html">Reservations</a>
+  <a href="contact.html">Contact</a>
+  <p class="foot">(512) 555&#8209;0184 &middot; 1200 E Sixth St, Austin</p>
+</div>
+
+<main id="main">
+
+  <div class="page-head">
+    <img class="page-bg" src="assets/images/hero.jpg" alt="" aria-hidden="true">
+    <div class="shell">
+      <p class="crumbs"><a href="index.html">Home</a><span>/</span>Reservations</p>
+      <span class="eyebrow">One seating an evening</span>
+      <h1>Book a Table</h1>
+      <p class="lede mt4">No deposit and no card details. Your table is held for the whole
+         evening, and your confirmation arrives by email within the minute.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="shell">
+
+      <div class="notice" style="margin-bottom:2.5rem">
+        <b>Demo</b>
+        <span>The calendar, availability, party rules and validation are all live &mdash; try
+          picking a big party and watch times disappear. Nothing is sent and no table is really
+          held: availability is simulated so it behaves the same every time. Service hours, the
+          105&#8209;minute turn time and the ten&#8209;guest online limit sit in one config block, and
+          are exactly the numbers the client still needs to confirm.</span>
+      </div>
+
+      <div data-booking>
+
+        <div data-live>
+          <div class="booking">
+
+            <!-- ─── when ─── -->
+            <div>
+              <div class="panel">
+                <div class="panel-head">
+                  <h3>How many of you?</h3>
+                  <span class="step">Step one</span>
+                </div>
+                <div class="stepper">
+                  <button type="button" data-dec aria-label="Fewer guests">&minus;</button>
+                  <span class="val" data-party aria-live="polite">2</span>
+                  <button type="button" data-inc aria-label="More guests">+</button>
+                </div>
+                <p class="note" data-partynote hidden>
+                  Ten is the largest party we take online. For eleven or more,
+                  <a class="link-u" href="contact.html">talk to our events team</a>.
+                </p>
+              </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <h3>Pick a date</h3>
+                  <span class="step">Step two</span>
+                </div>
+                <div class="cal-nav">
+                  <button type="button" data-prev aria-label="Previous month">&larr;</button>
+                  <span class="month" data-month aria-live="polite">&mdash;</span>
+                  <button type="button" data-next aria-label="Next month">&rarr;</button>
+                </div>
+                <div class="cal" data-cal></div>
+                <p class="note">We are closed on Mondays. The book opens sixty days ahead.</p>
+              </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <h3>Choose a time</h3>
+                  <span class="step">Step three</span>
+                </div>
+                <div class="slots" data-slots></div>
+                <p class="note" data-slotnote></p>
+              </div>
+            </div>
+
+            <!-- ─── who ─── -->
+            <form data-form novalidate>
+              <div class="panel summary">
+                <div class="panel-head"><h3>Your table</h3></div>
+                <dl>
+                  <dt>Date</dt>
+                  <dd class="pending" data-sum-date>Not chosen yet</dd>
+                  <dt>Time</dt>
+                  <dd class="pending" data-sum-time>Not chosen yet</dd>
+                  <dt>Party</dt>
+                  <dd data-sum-party>2 guests</dd>
+                </dl>
+              </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <h3>Your details</h3>
+                  <span class="step">Step four</span>
+                </div>
+
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="bk-name">Name <span class="req">*</span></label>
+                    <input id="bk-name" name="name" type="text" autocomplete="name" placeholder="Who is the table under?">
+                    <span class="err">Please tell us the name for the booking.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="bk-email">Email <span class="req">*</span></label>
+                    <input id="bk-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                    <span class="hint">Your confirmation goes here, plus a reminder the day before.</span>
+                    <span class="err">That does not look like a working email address.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="bk-phone">Phone <span class="req">*</span></label>
+                    <input id="bk-phone" name="phone" type="tel" autocomplete="tel" placeholder="(512) 555-0184">
+                    <span class="hint">Only used if something changes on the night.</span>
+                    <span class="err">Please give us a number we can reach you on.</span>
+                  </div>
+
+                  <div class="field">
+                    <label for="bk-occasion">Occasion</label>
+                    <select id="bk-occasion" name="occasion">
+                      <option value="">No particular occasion</option>
+                      <option>Birthday</option>
+                      <option>Anniversary</option>
+                      <option>Business dinner</option>
+                      <option>Celebration</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="bk-notes">Anything we should know?</label>
+                    <textarea id="bk-notes" name="notes" placeholder="Allergies, access needs, a high chair, a quiet corner…"></textarea>
+                    <span class="hint">Allergies especially &mdash; it changes how the kitchen preps your table.</span>
+                  </div>
+                </div>
+
+                <button class="btn mt4" type="submit" data-submit disabled style="width:100%">
+                  Confirm Reservation
+                </button>
+                <p class="note center">No payment now. No deposit. Cancel any time from your
+                   confirmation email.</p>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- ─── confirmation ─── -->
+        <div class="confirm" data-done>
+          <div class="seal"><span>&#10003;</span></div>
+          <span class="eyebrow">You are booked</span>
+          <h2>We will see you then</h2>
+          <p class="detail" data-detail></p>
+          <div class="divider" style="margin-inline:auto"></div>
+          <p class="muted">Booking reference</p>
+          <p class="ref" data-ref></p>
+          <p class="muted">A confirmation is on its way to <strong data-mail></strong>. It has a
+             link to change or cancel, so you never need to call. No payment was taken and no
+             deposit is required.</p>
+          <div class="row center mt4">
+            <a class="btn ghost" href="menu.html">Look at the Menu</a>
+            <button class="btn ghost" type="button" data-again>Make Another Booking</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="shell">
+      <div class="cols">
+        <div class="col" data-rev>
+          <h4>Running late?</h4>
+          <p>Call us. We hold every table fifteen minutes, and longer if we know you are on
+             the way.</p>
+        </div>
+        <div class="col" data-rev>
+          <h4>Large parties</h4>
+          <p>Eleven or more, or the whole terrace for fifty. Our events team will put
+             something together.</p>
+        </div>
+        <div class="col" data-rev>
+          <h4>Walk-ins</h4>
+          <p>Ten stools at the fire counter, held back every night for whoever turns up.</p>
+        </div>
+        <div class="col" data-rev>
+          <h4>Access</h4>
+          <p>Step-free from the street, lift to level seven, accessible facilities on the
+             floor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="shell">
+    <div class="cols">
+      <div class="col">
+        <h4>Find us</h4>
+        <p>1200 East Sixth Street<br>Rooftop, Level 7<br>Austin, Texas 78702</p>
+        <a class="link-u" href="contact.html">Directions</a>
+      </div>
+      <div class="col">
+        <h4>Hours</h4>
+        <ul class="hours">
+          <li data-day="1"><span class="day">Mon</span><span>Closed</span></li>
+          <li data-day="2"><span class="day">Tue &ndash; Thu</span><span>4 &ndash; 10 PM</span></li>
+          <li data-day="5"><span class="day">Fri &ndash; Sat</span><span>4 &ndash; 11 PM</span></li>
+          <li data-day="0"><span class="day">Sun</span><span>12 &ndash; 9 PM</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Reservations</h4>
+        <p class="muted">Book online any time, or call between 3 and 10 PM.</p>
+        <a class="btn small" href="reservations.html">Book a Table</a>
+      </div>
+      <div class="col">
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>&copy; <span data-year>2026</span> ANDRES Rooftop Smokehouse &amp; Grill</span>
+      <span>Demo build &middot; placeholder address, phone and copy</span>
+      <span>Privacy &middot; Accessibility</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

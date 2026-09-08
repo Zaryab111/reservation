@@ -1,7 +1,14 @@
-# vendored third-party skills — not our code
+# Archived scrape of the reference site — kept locally for comparison only.
+# Not ours to publish, and Vercel would serve it if it were committed.
+_reference/
+
+# Superseded placeholder photos (replaced by assets/images)
+build/
+
+# Vendored third-party skills
 .claude/skills/
 
-# local
+# Local
 node_modules/
 .DS_Store
 Thumbs.db
